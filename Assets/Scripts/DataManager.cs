@@ -8,9 +8,6 @@ public class DataManager : MonoBehaviour
     public GameObject pointToInstantiate;
     public GameObject edgeToInstantiate;
 
-    public string SphericalDataFileName;
-    public string HierarchyDataFileName;
-
     public List<GameObject> Points;
 
     public List<GameObject> LinesCrossLayers;
@@ -30,12 +27,20 @@ public class DataManager : MonoBehaviour
 
     public void GetJsonData()
     {
-        string sphericalFilePath = Path.Combine(Application.streamingAssetsPath, SphericalDataFileName);
-        string hierarchyFilePath = Path.Combine(Application.streamingAssetsPath, HierarchyDataFileName);
-        string sphericalDataAsString = File.ReadAllText(sphericalFilePath);
-        string hierarchyDataAsString = File.ReadAllText(hierarchyFilePath);
-        sphericalData = new JSONObject(sphericalDataAsString);
-        hierarchyData = new JSONObject(hierarchyDataAsString);
+        // 初始化 APIData 对象，把自己传过去，用来回调
+        APIData data = new APIData(this);
+        // 调用函数发起请求
+        data.GetSphericalLayoutData();
+        data.GetHierarchyLayoutData();
+    }
+
+    // 接收 APIData 发过来的数据，并进行处理
+    public void loadSphericalDataFromServer(string data) {
+        sphericalData = new JSONObject(data);
+    }
+    public void loadHierarchyDataFromServer(string data)
+    {
+        hierarchyData = new JSONObject(data);
     }
 
     public void CreatePoint(JSONObject sphericalNode, JSONObject hierarchyNode)
@@ -103,10 +108,11 @@ public class DataManager : MonoBehaviour
     {
         GetJsonData();
         JSONObject sphericalNodes = sphericalData["nodes"];
-        JSONObject hierarchyNodes = hierarchyData["nodes"];
         JSONObject sphericalEdges = sphericalData["edges"];
-        JSONObject hierarchyEdges = hierarchyData["edges"];
         sphericalPointPositions = new JSONObject(JSONObject.Type.OBJECT);
+
+        JSONObject hierarchyNodes = hierarchyData["nodes"];
+        JSONObject hierarchyEdges = hierarchyData["edges"];
         hierarchyPointPositions = new JSONObject(JSONObject.Type.OBJECT);
 
         for (int i = 0; i < sphericalData["nodes"].Count; i++)
@@ -121,7 +127,6 @@ public class DataManager : MonoBehaviour
 
         InitialGraph();
     }
-
 
     private void InitialGraph()
     {

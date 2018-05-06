@@ -186,6 +186,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 181965434}
+  - component: {fileID: 181965435}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -206,6 +207,30 @@ Transform:
   m_Father: {fileID: 1323837452}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181965435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 181965433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542588dca28fc44bfa0295c195d75214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoGraph: {fileID: 698994883}
+  pointToInstantiate: {fileID: 1544339195765626, guid: f2b8f209c36c84d2a813e5e8d69686e0,
+    type: 2}
+  edgeToInstantiate: {fileID: 1777756638268004, guid: d0137e5aa978a4790b849aad2124059f,
+    type: 2}
+  SphericalDataFileName: FLN_layout_hierarchy.json
+  HierarchyDataFileName: FLN_layout_hierarchy.json
+  Points: []
+  LinesCrossLayers: []
+  linesInSameLayer: []
+  GraphScale: 0.5
+  GraphPosition: {x: 0, y: 0.16, z: 2}
+  GraphRotation: {x: -90, y: 0, z: 0}
 --- !u!1 &282840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +303,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &698994883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 698994884}
+  m_Layer: 0
+  m_Name: InfoGraph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698994884
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698994883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323837451
 GameObject:

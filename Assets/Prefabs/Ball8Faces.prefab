@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114008992089443798}
   - component: {fileID: 114702751588408216}
   - component: {fileID: 114522710959914800}
+  - component: {fileID: 114172376845769400}
   m_Layer: 0
   m_Name: Ball8Faces
   m_TagString: Untagged
@@ -58,6 +59,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1a60866c96f2d5b4fbf0dd69b1081ca1, type: 2}
   m_StaticBatchInfo:
@@ -99,6 +101,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   delegates: []
+--- !u!114 &114172376845769400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692076751715830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e7f98a3a67b4ad2a57f155026c2982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 
+  Type: 
+  SphericalPosition: {x: 0, y: 0, z: 0}
+  HierarchyPosition: {x: 0, y: 0, z: 0}
+  RelatedLines: []
 --- !u!114 &114522710959914800
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4604306254664578}
   - component: {fileID: 120831568703431362}
-  - component: {fileID: 114854415173014174}
+  - component: {fileID: 114867354745473312}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114854415173014174
+--- !u!114 &114867354745473312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777756638268004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482bee67cf7619e419f66a4b1dd7405c, type: 3}
+  m_Script: {fileID: 11500000, guid: dd083c81d070b492cb5d39ca6fc4a8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SphericalStartPosition: {x: 0, y: 0, z: 0}
@@ -69,6 +69,7 @@ LineRenderer:
   m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -91,20 +92,23 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 12.824946, y: -12.756826, z: 7.812185}
-  - {x: 13.468897, y: 8.521565, z: 13.736626}
+  - {x: 4.2357373, y: 26.1456, z: 10}
+  - {x: 5.766306, y: 6.1427565, z: 10}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.001
     widthCurve:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 2
+      - serializedVersion: 3
         time: 0
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
